@@ -27,6 +27,7 @@ class _HomePageState extends State<_Home> {
   // create List/ items
 
   final _questions = const // => means that list would never change!
+  
   // list contnatins on a map (String, Object) => and every single key has a value !
   //List<Map<String, Object>
   // List = question
@@ -105,14 +106,13 @@ void restart() {
 
       body: _questionindex < _questions.length ?
 
-      Quiz(answerQuestion: _answerQuestion ,
-           questionindex:  _questionindex ,
-           questions: _questions,
+      Quiz( answerQuestion:   _answerQuestion ,
+            questionindex:    _questionindex  ,
+            questions:        _questions       ,
            )
     
       : Results(_totalscore, restart),
 
       );
   }
-
 }
